@@ -19,7 +19,7 @@ function getDifficultyAndFeature(level) {
     return { difficulty, feature };
 }
 
-const LEVELID = -1; // -1 for daily, -2 for weekly
+const LEVELID = parseInt(process.argv[2]); // -1 for daily, -2 for weekly
 
 function parseResponse(res) {
     const responses = res.split("#");
