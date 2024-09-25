@@ -1,4 +1,6 @@
 [
+  {"id":97785826,"dailyID":2859,"date":"2024-09-25","name":"srimp special","creator":"bunch","stars":6,"difficulty":4,"feature":1,"coins":3,"coinsVerified":true,"tier":0},
+  {"id":110380665,"dailyID":2858,"date":"2024-09-24","name":"F A D E","creator":"PTHERE","stars":6,"difficulty":4,"feature":1,"coins":0,"coinsVerified":false,"tier":0},
   {"id":110398067,"dailyID":2857,"date":"2024-09-23","name":"Vessel","creator":"KiziBro7","stars":9,"difficulty":5,"feature":2,"coins":2,"coinsVerified":true,"tier":0},
   {"id":110045795,"dailyID":2856,"date":"2024-09-22","name":"WhimsiCastle","creator":"JBRedux","stars":2,"difficulty":1,"feature":1,"coins":3,"coinsVerified":true,"tier":0},
   {"id":110312376,"dailyID":2855,"date":"2024-09-21","name":"Always Be","creator":"DangerKat","stars":6,"difficulty":4,"feature":2,"coins":0,"coinsVerified":true,"tier":0},

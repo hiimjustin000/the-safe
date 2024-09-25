@@ -31,7 +31,7 @@ function parseResponse(res) {
         id: parseInt(l[1]),
         ...dailyInfo,
         name: l[2],
-        creator: responses[3].split(":")[1],//creators[l[6]].username,
+        creator: responses[3] ? responses[3].split(":")[1] : "",//creators[l[6]].username,
         stars: parseInt(l[18]),
         ...getDifficultyAndFeature(l),
         coins: parseInt(l[37]),
