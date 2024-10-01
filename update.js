@@ -1,3 +1,10 @@
+const fs = require("fs");
+const path = require("path");
+const daily = require("./daily.json");
+const weekly = require("./weekly.json");
+
+const LEVELID = parseInt(process.argv[2]); // -1 for daily, -2 for weekly
+
 function getDifficultyAndFeature(level) {
     const denominator = Number(level[8]);
     const numerator = Number(level[9]);
@@ -18,11 +25,6 @@ function getDifficultyAndFeature(level) {
 
     return { difficulty, feature };
 }
-
-const LEVELID = parseInt(process.argv[2]); // -1 for daily, -2 for weekly
-
-const daily = require("./daily.json");
-const weekly = require("./weekly.json");
 
 function parseResponse(res) {
     const responses = res.split("#");
@@ -55,6 +57,10 @@ function parseResponse(res) {
     };
 }
 
+function newLineForEveryEntryButDontPrettifyEverything(obj) {
+    return JSON.stringify(obj).replace(/\},\{/g, "},\n  {").replace("[", "[\n  ").slice(0, -1) + "\n]";
+}
+
 fetch("https://www.boomlings.com/database/downloadGJLevel22.php", {
     method: "POST",
     headers: {
@@ -63,5 +69,9 @@ fetch("https://www.boomlings.com/database/downloadGJLevel22.php", {
     },
     body: `gameVersion=22&binaryVersion=42&levelID=${LEVELID}&secret=Wmfd2893gb7`,
 }).then(r => r.text()).then(res => {
-    console.log(JSON.stringify(parseResponse(res)) + ",");
+    console.log(JSON.stringify(parseResponse(res)));
+    if (LEVELID == -1)
+        fs.writeFileSync(path.join(__dirname, "daily.json"), newLineForEveryEntryButDontPrettifyEverything([parseResponse(res), ...daily]));
+    else if (LEVELID == -2)
+        fs.writeFileSync(path.join(__dirname, "weekly.json"), newLineForEveryEntryButDontPrettifyEverything([parseResponse(res), ...weekly]));
 });
