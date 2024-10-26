@@ -1,4 +1,10 @@
 [
+  {"id":104568502,"dailyID":2890,"date":"2024-10-26","name":"what the dang","creator":"0a1","stars":7,"difficulty":4,"feature":1,"coins":1,"coinsVerified":true,"tier":0},
+  {"id":111423762,"dailyID":2889,"date":"2024-10-25","name":"Los Craneos","creator":"BJuanP","stars":6,"difficulty":4,"feature":1,"coins":3,"coinsVerified":true,"tier":0},
+  {"id":111424728,"dailyID":2888,"date":"2024-10-24","name":"signals","creator":"krenogd","stars":6,"difficulty":4,"feature":1,"coins":0,"coinsVerified":true,"tier":0},
+  {"id":111196602,"dailyID":2887,"date":"2024-10-23","name":"JAMMED","creator":"Foliblox","stars":7,"difficulty":4,"feature":1,"coins":3,"coinsVerified":true,"tier":0},
+  {"id":110989339,"dailyID":2886,"date":"2024-10-22","name":"Ovosch ","creator":"VEYZZ","stars":6,"difficulty":4,"feature":1,"coins":3,"coinsVerified":true,"tier":0},
+  {"id":109895257,"dailyID":2885,"date":"2024-10-21","name":"Never Let You Down","creator":"LinuDi","stars":6,"difficulty":4,"feature":1,"coins":0,"coinsVerified":false,"tier":0},
   {"id":110585925,"dailyID":2884,"date":"2024-10-20","name":"no time to waste","creator":"quadrid","stars":6,"difficulty":4,"feature":1,"coins":0,"coinsVerified":true,"tier":0},
   {"id":110763991,"dailyID":2883,"date":"2024-10-19","name":"XXI","creator":"LennyCreator","stars":8,"difficulty":5,"feature":2,"coins":2,"coinsVerified":true,"tier":0},
   {"id":110409948,"dailyID":2882,"date":"2024-10-18","name":"Gear Frost","creator":"BloxyDoesGD","stars":2,"difficulty":1,"feature":1,"coins":2,"coinsVerified":true,"tier":0},
