@@ -1,4 +1,7 @@
 [
+  {"id":111576000,"dailyID":2904,"date":"2024-11-08","name":"Glimmer Flux","creator":"DASFDD","stars":5,"difficulty":3,"feature":1,"coins":0,"coinsVerified":true,"tier":0},
+  {"id":111829836,"dailyID":2903,"date":"2024-11-07","name":"Clean Sweep","creator":"DubstepFanatic","stars":6,"difficulty":4,"feature":1,"coins":1,"coinsVerified":true,"tier":0},
+  {"id":111627603,"dailyID":2902,"date":"2024-11-06","name":"SpookySigmaSkeletons","creator":"Woxius","stars":4,"difficulty":3,"feature":1,"coins":0,"coinsVerified":true,"tier":0},
   {"id":110659295,"dailyID":2901,"date":"2024-11-05","name":"RaveYard","creator":"ArcadiacManiac","stars":9,"difficulty":5,"feature":2,"coins":0,"coinsVerified":false,"tier":0},
   {"id":111789701,"dailyID":2900,"date":"2024-11-04","name":"Reckless Driving","creator":"StyphonTV","stars":6,"difficulty":4,"feature":1,"coins":3,"coinsVerified":true,"tier":0},
   {"id":111572610,"dailyID":2899,"date":"2024-11-03","name":"visi0nary","creator":"euphria","stars":7,"difficulty":4,"feature":2,"coins":3,"coinsVerified":true,"tier":0},
