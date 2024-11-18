@@ -47,6 +47,11 @@ fetch("https://www.boomlings.com/database/downloadGJLevel22.php", {
     },
     body: `gameVersion=22&binaryVersion=42&levelID=${LEVELID}&secret=Wmfd2893gb7`,
 }).then(r => r.text()).then(res => {
+    if (res == "-1") {
+        console.log("Level not found");
+        return;
+    }
+
     console.log(JSON.stringify(parseResponse(res)));
     if (LEVELID == -1)
         fs.writeFileSync(path.join(__dirname, "v2", "daily.json"), newLineForEveryEntryButDontPrettifyEverything([parseResponse(res), ...daily]));
