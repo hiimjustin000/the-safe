@@ -52,11 +52,32 @@ fetch("https://www.boomlings.com/database/downloadGJLevel22.php", {
         return;
     }
 
-    console.log(JSON.stringify(parseResponse(res)));
-    if (LEVELID == -1)
-        fs.writeFileSync(path.join(__dirname, "v2", "daily.json"), newLineForEveryEntryButDontPrettifyEverything([parseResponse(res), ...daily]));
-    else if (LEVELID == -2)
-        fs.writeFileSync(path.join(__dirname, "v2", "weekly.json"), newLineForEveryEntryButDontPrettifyEverything([parseResponse(res), ...weekly]));
-    else if (LEVELID == -3)
-        fs.writeFileSync(path.join(__dirname, "v2", "event.json"), newLineForEveryEntryButDontPrettifyEverything([parseResponse(res), ...event]));
+    const parsedResponse = parseResponse(res);
+    if (LEVELID == -1) {
+        if (daily[0].id == parsedResponse.id) {
+            console.log("Daily already up to date");
+            return;
+        }
+
+        console.log(JSON.stringify(parsedResponse));
+        fs.writeFileSync(path.join(__dirname, "v2", "daily.json"), newLineForEveryEntryButDontPrettifyEverything([parsedResponse, ...daily]));
+    }
+    else if (LEVELID == -2) {
+        if (weekly[0].id == parsedResponse.id) {
+            console.log("Weekly already up to date");
+            return;
+        }
+
+        console.log(JSON.stringify(parsedResponse));
+        fs.writeFileSync(path.join(__dirname, "v2", "weekly.json"), newLineForEveryEntryButDontPrettifyEverything([parsedResponse, ...weekly]));
+    }
+    else if (LEVELID == -3) {
+        if (event[0].id == parsedResponse.id) {
+            console.log("Event already up to date");
+            return;
+        }
+
+        console.log(JSON.stringify(parsedResponse));
+        fs.writeFileSync(path.join(__dirname, "v2", "event.json"), newLineForEveryEntryButDontPrettifyEverything([parsedResponse, ...event]));
+    }
 });
