@@ -27,6 +27,12 @@ function parseResponse(res) {
     else if (LEVELID == -3) {
         dailyInfo.timelyID = parseInt(l[41]) - 200000;
         dailyInfo.dates = [];
+        const date = new Date(event[1].dates[event[1].dates.length - 1]);
+        const currentDate = new Date(Math.floor(Date.now() / 86400000) * 86400000 - 86400000);
+        while (date.getTime() < currentDate.getTime()) {
+            date.setUTCDate(date.getUTCDate() + 1);
+            event[0].dates.push(date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1).toString().padStart(2, "0") + "-" + date.getUTCDate().toString().padStart(2, "0"));
+        }
     }
     return {
         id: parseInt(l[1]),
