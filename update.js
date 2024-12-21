@@ -66,6 +66,10 @@ fetch("https://www.boomlings.com/database/downloadGJLevel22.php", {
         return;
     }
 
+    if (LEVELID == -1) console.log(`Daily response: ${res.replace(/:4:[^:]+/, "")}`);
+    else if (LEVELID == -2) console.log(`Weekly response: ${res.replace(/:4:[^:]+/, "")}`);
+    else if (LEVELID == -3) console.log(`Event response: ${res.replace(/:4:[^:]+/, "")}`);
+
     const parsedResponse = parseResponse(res);
     if (LEVELID == -1) {
         if (daily[0].id == parsedResponse.id) {
