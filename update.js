@@ -54,15 +54,7 @@ fetch("https://www.boomlings.com/database/downloadGJLevel22.php", {
     body: `gameVersion=22&binaryVersion=42&levelID=${LEVELID}&secret=Wmfd2893gb7`,
 }).then(r => r.text()).then(res => {
     if (res == "-1") {
-        if (LEVELID == -1) console.log("Invalid daily response");
-        else if (LEVELID == -2) console.log("Invalid weekly response");
-        else if (LEVELID == -3) console.log("Invalid event response");
-        return;
-    }
-    else if (res.startsWith("<")) {
-        if (LEVELID == -1) console.log("Banned from daily by Cloudflare");
-        else if (LEVELID == -2) console.log("Banned from weekly by Cloudflare");
-        else if (LEVELID == -3) console.log("Banned from event by Cloudflare");
+        console.log("Level not found");
         return;
     }
 
